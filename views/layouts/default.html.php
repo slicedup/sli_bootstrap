@@ -5,7 +5,7 @@
 	<title>Application &gt; <?php echo $this->title(); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php echo $this->html->style('/sli_bootstrap/css/app'); ?>
-	<?php echo $this->scripts(); ?>
+	
 	<?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
 </head>
 <body class="container" id="container">
@@ -21,5 +21,7 @@
 		<hr>
 		<strong><em>Slicedup, Lithium & Twitter Bootstrap Awsomeness</em></strong>
 	</footer>
+	<?php $this->element->render('scripts', array(), array('library' => 'sli_bootstrap'));?>
+	<?php echo $this->scripts(); ?>
 </body>
 </html>
