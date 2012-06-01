@@ -12,10 +12,15 @@ $this->title($t($plural));
 	<h2><?php echo $t('{:action} {:entity}', array('action' => $t('View'), 'entity' => $t($singular)));?></h2>
 	<div class="row">
 		<div class="span9 details">
+			<legend><?php 
+				if ($title = $model::meta('title')):
+					echo $h($record->{$title});
+				endif;
+			?></legend>
 			<table class="table table-striped table-bordered">
 				<?php foreach ($fields as $field => $name):?>
 				<tr>
-					<td style="width:20%;"><?php echo $t($name)?></td>
+					<td><?php echo $t($name)?></td>
 					<td><?php echo $h($record->{$field});?></td>
 				</tr>
 				<?php endforeach;?>

@@ -4174,3 +4174,13 @@ a.badge:hover {
 .invisible {
   visibility: hidden;
 }
+.scaffold form legend + div {
+  clear: both;
+  padding-top: 15px;
+}
+.scaffold form .controls .error {
+  display: none;
+}
+.scaffold .details table tr td:first-child {
+  width: 20%;
+}

@@ -11,6 +11,7 @@ $this->title($t($plural));
 	<h2><?php echo $t($plural);?></h2>
 	<div class="row">
 	  <div class="span10 summary">
+	  	<legend>&nbsp;</legend>
 		<table class="table table-striped table-bordered">
 			<tr>
 			<?php foreach ($fields as $field => $name):?>
