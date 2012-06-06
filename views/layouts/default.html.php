@@ -5,7 +5,8 @@
 	<title>Application &gt; <?php echo $this->title(); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php echo $this->html->style('/sli_bootstrap/css/app'); ?>
-	
+	<?php echo $this->styles(); ?>
+	<?php echo $this->head(); ?>
 	<?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
 </head>
 <body class="container" id="container">
@@ -13,7 +14,6 @@
 		<h1>Application &gt; <?php echo $this->title(); ?></h1>
 	</header>
 	<section class="container" id="content">
-		<?php echo $this->flashMessage->output(null, array('options' => array('library' => 'sli_bootstrap')));?>
 		<?php echo $this->content(); ?>
 	</section>
 	<br><br>
@@ -21,7 +21,7 @@
 		<hr>
 		<strong><em>Slicedup, Lithium & Twitter Bootstrap Awsomeness</em></strong>
 	</footer>
-	<?php $this->element->render('scripts', array(), array('library' => 'sli_bootstrap'));?>
+	<?php $this->_render('element', 'scripts', array(), array('library' => 'sli_bootstrap'));?>
 	<?php echo $this->scripts(); ?>
 </body>
 </html>
