@@ -8,6 +8,7 @@
 
 $this->title($t($plural));
 ?>
+<?php echo $this->_render('element', 'scaffold_before', array(), array('library' => 'sli_bootstrap'));?>
 <div class="scaffold <?php echo $plural;?> add<?php echo $singular;?>">
 	<h2><?php echo $t('{:action} {:entity}', array('action' => $t('Add'), 'entity' => $t($singular)));?></h2>
 	<div class="row">

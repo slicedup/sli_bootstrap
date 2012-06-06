@@ -7,6 +7,7 @@
  */
 $this->title($t($plural));
 ?>
+<?php echo $this->_render('element', 'scaffold_before', array(), array('library' => 'sli_bootstrap'));?>
 <div class="scaffold <?php echo $plural;?> index<?php echo $singular;?>">
 	<h2><?php echo $t($plural);?></h2>
 	<div class="row">
