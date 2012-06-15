@@ -8,13 +8,12 @@
 
 $this->title($t($plural));
 ?>
-<?php echo $this->_render('element', 'scaffold_before', array(), array('library' => 'sli_bootstrap'));?>
 <div class="scaffold <?php echo $plural;?> edit<?php echo $singular;?>">
 	<h2><?php echo $t('{:action} {:entity}', array('action' => $t('Edit'), 'entity' => $t($singular)));?></h2>
 	<div class="row">
 		<div class="span9 form create">
 			<?php
-				echo $this->_render('element', 'scaffold_form', compact('record', 'url', 'fieldsets'), array(
+				echo $this->_render('element', 'scaffold_form_tabbed', compact('record', 'url', 'fieldsets'), array(
 					'library' => 'sli_bootstrap'
 				));
 			?>
